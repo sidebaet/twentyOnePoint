@@ -1,0 +1,24 @@
+{
+    "twentyOnePointApp": {
+        "fields" : {
+            "home": {
+                "title": "Fields",
+                "createLabel": "Créer un nouveau Fields",
+                "createOrEditLabel": "Créer ou éditer un Fields",
+                "search": "Recherche pour Fields"
+            },
+            "created": "Un nouveau Fields a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Fields avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Fields avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Fields {{ id }} ?"
+            },
+            "detail": {
+                "title": "Fields"
+            },
+            "weeklyGoal": "Weekly Goal",
+            "weightUnits": "Weight Units",
+            "user": "User"
+        }
+    }
+}

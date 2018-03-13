@@ -1,0 +1,24 @@
+{
+    "twentyOnePointApp": {
+        "fields" : {
+            "home": {
+                "title": "Fields",
+                "createLabel": "Create a new Fields",
+                "createOrEditLabel": "Create or edit a Fields",
+                "search": "Search for Fields"
+            },
+            "created": "A new Fields is created with identifier {{ param }}",
+            "updated": "A Fields is updated with identifier {{ param }}",
+            "deleted": "A Fields is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Fields {{ id }}?"
+            },
+            "detail": {
+                "title": "Fields"
+            },
+            "weeklyGoal": "Weekly Goal",
+            "weightUnits": "Weight Units",
+            "user": "User"
+        }
+    }
+}

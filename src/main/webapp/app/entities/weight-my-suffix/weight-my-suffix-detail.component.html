@@ -1,0 +1,34 @@
+
+<div *ngIf="weight">
+    <h2><span jhiTranslate="twentyOnePointApp.weight.detail.title">Weight</span> {{weight.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="twentyOnePointApp.weight.dateTime">Date Time</span></dt>
+        <dd>
+            <span>{{weight.dateTime | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span jhiTranslate="twentyOnePointApp.weight.weight">Weight</span></dt>
+        <dd>
+            <span>{{weight.weight}}</span>
+        </dd>
+        <dt><span jhiTranslate="twentyOnePointApp.weight.user">User</span></dt>
+        <dd>
+            {{weight.userId}}
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'weight-my-suffix/'+ weight.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

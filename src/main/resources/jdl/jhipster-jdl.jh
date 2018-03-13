@@ -1,0 +1,45 @@
+entity Points{
+	date LocalDate required
+    exercise Integer
+    meals Integer
+    alcohol Integer
+    notes String maxlength(140)
+}
+
+entity Weight{
+	dateTime LocalDate required
+    weight Double required
+}
+
+entity BloodPressure{
+	dateTime LocalDate required
+    systolic Integer min(10) max(99)
+    diastolic Integer
+}
+
+entity Fields{
+	weeklyGoal Integer required min(10) max(21)
+    weightUnits Units required
+}
+
+enum Units{
+	KG, LB
+}
+
+relationship ManyToOne {
+	Points{user} to User
+    Weight{user} to User
+    Fields{user} to User
+    BloodPressure{user} to User
+}
+
+// Set pagination options
+//paginate JobHistory, Employee with infinite-scroll
+paginate Points, Weight, Fields, BloodPressure with pagination
+
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl //except Employee, Job
+// Set an angular suffix
+angularSuffix * with mySuffix
